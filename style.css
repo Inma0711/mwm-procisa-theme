@@ -1,0 +1,44 @@
+/*
+Theme Name: Procisa Theme
+Theme URI: https://procisa.es
+Author: Procisa
+Author URI: https://procisa.es
+Description: Tema personalizado para Procisa
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mwm-procisa-theme
+*/
+
+/* Estilos generales */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+#home.site-header {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: url('assets/images/fondo_header.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
