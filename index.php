@@ -9,6 +9,7 @@
 <body <?php body_class(); ?>>
 
 <?php get_template_part('template-parts/header'); ?>
+<?php get_template_part('template-parts/nav'); ?>
 
     <main id="primary" class="site-main container">
 

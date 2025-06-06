@@ -43,6 +43,12 @@ function procisa_enqueue_assets() {
         array('procisa-style'),
         filemtime(get_template_directory() . '/assets/css/header.css')
     );
+    wp_enqueue_style(
+        'procisa-nav',
+        get_template_directory_uri() . '/assets/css/nav.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/nav.css')
+    );
 
     // Scripts
     $nav_js = get_template_directory() . '/js/navigation.js';

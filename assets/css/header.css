@@ -1,38 +1,54 @@
 /* CSS personalizado para el header */
 
 .site-header {
+  width: 100vw;
+  height: 70vh;
+  min-height: 500px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: url('../images/fondo_header.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/*
+.site-header {
     width: 100%; 
-    height: 120vh; 
+    height: 100%; 
     min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+    position: relative;
     background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed; 
     background-attachment: fixed; 
     background-size: cover;
-}
+}^
+*/
 
 .site-header .language-selector {
-    width: 100%; 
-    height: 100vh; 
-    min-height: 100vh; 
-    background: o-repeat center center fixed; 
-    background-attachment: fixed; 
-    background-size: cover;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
+  width: auto;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
 }
 
 .site-header .language-selector a {
-    color: #999; 
-    margin-right: 10px;
-    color: #999;
-    margin-right: 10px;
-    text-decoration: none;
-    font-size: 1.5rem;
+  color: #999;
+  margin-right: 10px;
+  color: #999;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
-.header-content{
-    width: 100%;
+.header-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,41 +56,43 @@
   height: 100vh;
 }
 
-.header-content img{
-    width: 195px; 
-    max-width: 100%; 
-    height: auto; 
-    vertical-align: 
-    middle; border: 0;
+.header-content img {
+  width: 195px;
+  max-width: 100%;
+  height: auto;
+  vertical-align:
+    middle;
+  border: 0;
 
 }
 
 .header-content .slider {
-    position: relative; 
-    overflow: hidden; 
-    width: 100%; 
-    font-size: 38px; 
-    margin-top: 20px; 
-    background-color: rgba(0,0,0,0.6); 
-    text-align: center; 
-    color: #fff; 
-    line-height: 40px; 
-    font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  font-size: 38px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 .slider {
   width: 100%;
   font-size: 38px;
   margin-top: 20px;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
   color: #fff;
   line-height: 40px;
-  font-family: 'Open Sans',Helvetica,Arial,sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: bold;
   padding: 20px 0;
   position: relative;
 }
+
 .slider-phrases {
   display: inline-block;
   height: 40px;
@@ -83,6 +101,7 @@
   position: relative;
   min-width: 320px;
 }
+
 .slider-phrases span {
   display: block;
   opacity: 0;
@@ -93,6 +112,7 @@
   right: 0;
   top: 0;
 }
+
 .slider-phrases span.active {
   opacity: 1;
   transform: translateY(0);
@@ -156,10 +176,12 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+
   .row-fluid .span6 {
     width: 48.717948717948715%;
     margin-left: 0;
   }
+
   .row-fluid .span2 {
     width: 14.52991452991453%;
     margin-left: 0;
@@ -173,7 +195,9 @@
     justify-content: center;
     align-items: flex-end;
   }
-  .row-fluid .span6, .row-fluid .span2 {
+
+  .row-fluid .span6,
+  .row-fluid .span2 {
     float: none;
     width: 100%;
     margin-left: 0;
@@ -210,6 +234,7 @@
   position: relative;
   z-index: 2;
 }
+
 .boton_nuestro_trabajo:hover {
   background: #FFD600;
   color: #222;
@@ -236,6 +261,7 @@
   z-index: 10;
   transition: all 0.3s ease-in-out;
 }
+
 #arrow_down:hover {
   background: #000;
 }
