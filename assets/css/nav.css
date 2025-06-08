@@ -37,3 +37,13 @@
 .navbar .nav a:hover {
   color: #FFD600;
 }
+
+.nav-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff; /* O el color de tu nav */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}

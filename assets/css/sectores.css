@@ -1,0 +1,105 @@
+#sectores_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.sector-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    margin-bottom: 20px;
+}
+
+.sector-row.center-single-item {
+    justify-content: center;
+}
+
+.sector-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    max-width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+.sector-item:hover {
+    background-color: #999; /* Color de fondo al pasar el ratón, el gris claro */
+}
+
+.sector-item img {
+    height: auto;
+    max-width: 100%;
+    /* Eliminar estilos de borde, fondo y padding ya que la imagen viene con el círculo */
+    object-fit: contain;
+  
+}
+
+.sector-item p {
+    font-size: 18px; /* Texto un poco más grande para acompañar la imagen */
+    color: #333;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 992px) {
+    .sector-row {
+        gap: 30px;
+    }
+    .sector-item {
+        width: 180px;
+        padding: 12px;
+    }
+    .sector-item img {
+        width: 120px;
+        height: 120px;
+    }
+    .sector-item p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sector-row {
+        gap: 20px;
+    }
+    .sector-item {
+        width: 150px;
+        padding: 10px;
+    }
+    .sector-item img {
+        width: 100px;
+        height: 100px;
+    }
+    .sector-item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #sectores_items {
+        padding: 20px 10px;
+    }
+    .sector-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .sector-item {
+        width: 90%;
+        padding: 8px;
+    }
+    .sector-item img {
+        width: 80px;
+        height: 80px;
+    }
+    .sector-item p {
+        font-size: 14px;
+    }
+}

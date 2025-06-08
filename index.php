@@ -13,7 +13,12 @@
 
     <main id="primary" class="site-main container">
 
-    <?php get_template_part('template-parts/services'); ?>
+    <?php get_template_part('template-parts/servicios'); ?>
+    <?php get_template_part('template-parts/txtblock-servicios'); ?>
+    <?php get_template_part('template-parts/carruselcertificados'); ?>
+    <?php get_template_part('template-parts/sectores'); ?>
+    <?php get_template_part('template-parts/contact'); ?>
+  
 
     </main>
 

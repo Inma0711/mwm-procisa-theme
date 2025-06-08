@@ -50,17 +50,72 @@ function procisa_enqueue_assets() {
         filemtime(get_template_directory() . '/assets/css/nav.css')
     );
     wp_enqueue_style(
-        'procisa-services',
-        get_template_directory_uri() . '/assets/css/services.css',
+        'procisa-servicios',
+        get_template_directory_uri() . '/assets/css/servicios.css',
         array('procisa-style'),
-        filemtime(get_template_directory() . '/assets/css/services.css')
+        filemtime(get_template_directory() . '/assets/css/servicios.css')
+    );
+    wp_enqueue_style(
+        'procisa-txtblock-servicios',
+        get_template_directory_uri() . '/assets/css/txtblock-servicios.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/txtblock-servicios.css')
+    );
+    wp_enqueue_style(
+        'procisa-contact',
+        get_template_directory_uri() . '/assets/css/contact.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/contact.css')
+    );
+    wp_enqueue_style(
+        'procisa-carruselcertidicados',
+        get_template_directory_uri() . '/assets/css/carrusercertificados.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/carruselcertificados.css')
+    );
+    wp_enqueue_style(
+        'procisa-sectores',
+        get_template_directory_uri() . '/assets/css/sectores.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/sectores.css')
+    );
+
+    // Estilos de Owl Carousel
+    wp_enqueue_style(
+        'owl-carousel-core',
+        get_template_directory_uri() . '/assets/lib/owl-carousel/owl.carousel.min.css',
+        array(),
+        '2.3.4'
+    );
+    wp_enqueue_style(
+        'owl-carousel-theme',
+        get_template_directory_uri() . '/assets/lib/owl-carousel/owl.theme.default.min.css',
+        array('owl-carousel-core'),
+        '2.3.4'
     );
 
     // Scripts
+    // Asegúrate de que jQuery esté cargado. WordPress lo carga por defecto.
+    wp_enqueue_script('jquery');
+
+    // Scripts de Owl Carousel
+    wp_enqueue_script(
+        'owl-carousel-js',
+        get_template_directory_uri() . '/assets/lib/owl-carousel/owl.carousel.min.js',
+        array('jquery'),
+        '2.3.4',
+        true // Carga el script en el footer
+    );
+
     $nav_js = get_template_directory() . '/js/navigation.js';
     if ( file_exists( $nav_js ) ) {
         wp_enqueue_script( 'procisa-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
     }
+    $nav_scroll_js = get_template_directory() . '/assets/js/nav-scroll.js';
+    if ( file_exists( $nav_scroll_js ) ) {
+        wp_enqueue_script( 'procisa-nav-scroll', get_template_directory_uri() . '/assets/js/nav-scroll.js', array('jquery', 'owl-carousel-js'), '1.0', true );
+    }
+
 }
 add_action( 'wp_enqueue_scripts', 'procisa_enqueue_assets' );
 
