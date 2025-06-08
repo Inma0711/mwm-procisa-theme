@@ -36,14 +36,14 @@
     text-decoration: none;
   }
 
-  a[href="#contact"] {
+  a[href="#contacto"] {
     all: unset;      /* Quita todos los estilos (color, subrayado, etc.) */
     cursor: pointer; /* Para que el cursor cambie a mano al pasar por encima */
     text-decoration: none; /* Por si acaso */
     color: inherit; /* Para que tome el color del texto padre */
   }
   
-  a[href="#contact"]:hover {
+  a[href="#contacto"]:hover {
     color: #FFD600;
   }
   

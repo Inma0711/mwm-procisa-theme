@@ -33,10 +33,9 @@
     <?php get_template_part('template-parts/txtblock-historia'); ?>
     <?php get_template_part('template-parts/historialogos'); ?>
 
-    
-    <?php get_template_part('template-parts/contact'); ?>
+    <!-- Sección de contacto -->
+    <?php get_template_part('template-parts/contacto'); ?>
   
-
     </main>
 
 <?php get_template_part('template-parts/footer'); ?>

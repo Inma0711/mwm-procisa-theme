@@ -62,10 +62,10 @@ function procisa_enqueue_assets() {
         filemtime(get_template_directory() . '/assets/css/txtblock-servicios.css')
     );
     wp_enqueue_style(
-        'procisa-contact',
-        get_template_directory_uri() . '/assets/css/contact.css',
+        'procisa-contacto',
+        get_template_directory_uri() . '/assets/css/contacto.css',
         array('procisa-style'),
-        filemtime(get_template_directory() . '/assets/css/contact.css')
+        filemtime(get_template_directory() . '/assets/css/contacto.css')
     );
     wp_enqueue_style(
         'procisa-carruselcertidicados',
@@ -104,6 +104,14 @@ function procisa_enqueue_assets() {
         get_template_directory_uri() . '/assets/lib/owl-carousel/owl.theme.default.min.css',
         array('owl-carousel-core'),
         '2.3.4'
+    );
+
+    // Estilos de Footer
+    wp_enqueue_style(
+        'procisa-footer',
+        get_template_directory_uri() . '/assets/css/footer.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/footer.css')
     );
 
     // Scripts
