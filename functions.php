@@ -85,6 +85,12 @@ function procisa_enqueue_assets() {
         array('procisa-style'),
         filemtime(get_template_directory() . '/assets/css/nosotros.css')
     );
+    wp_enqueue_style(
+        'procisa-historialogos',
+        get_template_directory_uri() . '/assets/css/historialogos.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/historialogos.css')
+    );
 
     // Estilos de Owl Carousel
     wp_enqueue_style(

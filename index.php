@@ -29,6 +29,11 @@
     <?php get_template_part('template-parts/carruselcertificados'); ?>
 
     <!-- Sección de historia -->
+    <?php get_template_part('template-parts/historia'); ?>
+    <?php get_template_part('template-parts/txtblock-historia'); ?>
+    <?php get_template_part('template-parts/historialogos'); ?>
+
+    
     <?php get_template_part('template-parts/contact'); ?>
   
 

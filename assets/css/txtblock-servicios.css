@@ -21,6 +21,14 @@
     padding: 40px 0 80px 0;
     height: 35%;
 }
+
+.container.txtblock-historia {
+    background: #23231F url('../images/sep_certificados.jpg') center center no-repeat;
+    background-size: auto;
+    background-size: cover;
+    padding: 40px 0 40px 0;
+    height: 35%;
+}
   
 .container.txtblock a {
     color: #fff;

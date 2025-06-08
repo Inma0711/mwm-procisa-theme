@@ -24,7 +24,7 @@
   font-weight: 800;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #222;
+  color: #333;
   letter-spacing: -3px;
 }
 
@@ -60,11 +60,6 @@
   line-height: 1.6;
   letter-spacing: -1px;
   font-weight: 300;
-}
-
-#nosotros .lead strong {
-  color: #444;
-  font-weight: 700px;
 }
 
 .row {

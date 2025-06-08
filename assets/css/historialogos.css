@@ -1,0 +1,65 @@
+.historialogos-container {
+    padding: 40px 20px; /* Padding alrededor de los logos */
+    text-align: center;
+}
+
+.historialogos-container .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 30px; 
+}
+
+.historialogos-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px; /* Alto del área circular */
+    border-radius: 50%; /* Hacer el contenedor circular */
+    background-color: #d8d8d8; /* Gris claro del círculo */
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.historialogos-container a:hover {
+    background-color: #c0c0c0; /* Gris un poco más oscuro al pasar el ratón */
+}
+
+.historialogos-container img {
+    max-width: 100%; /* Asegura que la imagen quepa dentro del círculo */
+    max-height: 100%;
+    filter: grayscale(100%); /* Poner la imagen en blanco y negro */
+    transition: filter 0.3s ease; /* Transición suave para el efecto de color */
+}
+
+.historialogos-container a:hover img {
+    filter: grayscale(0%); /* Quitar el blanco y negro al pasar el ratón */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .historialogos-container .text-center {
+        gap: 20px;
+    }
+    .historialogos-container a {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .historialogos-container .text-center {
+        gap: 15px;
+    }
+    .historialogos-container a {
+        width: 100px;
+        height: 100px;
+    }
+    .historialogos-container img {
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
