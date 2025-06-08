@@ -6,6 +6,39 @@
     padding: 0.5rem;
 }
 
+.container.txtblock-sectores {
+  background: #23231F url('../images/sep_clientes.jpg') center center no-repeat;
+  background-size: auto;
+  background-size: cover;
+  padding: 40px 0 80px 0;
+  height: 35%;
+}
+
+.container.txtblock-nosotros {
+    background: #23231F url('../images/sep_grupo.jpg') center center no-repeat;
+    background-size: auto;
+    background-size: cover;
+    padding: 40px 0 80px 0;
+    height: 35%;
+}
+  
+.container.txtblock a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  a[href="#contact"] {
+    all: unset;      /* Quita todos los estilos (color, subrayado, etc.) */
+    cursor: pointer; /* Para que el cursor cambie a mano al pasar por encima */
+    text-decoration: none; /* Por si acaso */
+    color: inherit; /* Para que tome el color del texto padre */
+  }
+  
+  a[href="#contact"]:hover {
+    color: #FFD600;
+  }
+  
 .txtblock-text {
     background: url('../images/icon-apos.png') 0px 12px no-repeat;
     color: #FFFFFF;

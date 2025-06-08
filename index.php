@@ -13,10 +13,22 @@
 
     <main id="primary" class="site-main container">
 
+    <!-- Sección de servicios -->
     <?php get_template_part('template-parts/servicios'); ?>
     <?php get_template_part('template-parts/txtblock-servicios'); ?>
     <?php get_template_part('template-parts/carruselcertificados'); ?>
+
+    <!-- Sección de sectores -->
     <?php get_template_part('template-parts/sectores'); ?>
+    <?php get_template_part('template-parts/txtblock-sectores'); ?>
+    <?php get_template_part('template-parts/carruselcertificados'); ?>
+
+    <!-- Sección de nosotros -->
+    <?php get_template_part('template-parts/nosotros'); ?>
+    <?php get_template_part('template-parts/txtblock-nosotros'); ?>
+    <?php get_template_part('template-parts/carruselcertificados'); ?>
+
+    <!-- Sección de historia -->
     <?php get_template_part('template-parts/contact'); ?>
   
 

@@ -1,4 +1,5 @@
-<section id="servicios">
+<section id="servicios"> <!-- Ha la seccion sectores lleva los estilos de servicios para no repetir codigo -->
+    <span id="sectores" ></span>
           <div class="container">
             <h2 class="text-center">SECTORES</h2>
             <div class="icon-works">

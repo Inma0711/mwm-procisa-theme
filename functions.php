@@ -79,6 +79,12 @@ function procisa_enqueue_assets() {
         array('procisa-style'),
         filemtime(get_template_directory() . '/assets/css/sectores.css')
     );
+    wp_enqueue_style(
+        'procisa-nosotros',
+        get_template_directory_uri() . '/assets/css/nosotros.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/nosotros.css')
+    );
 
     // Estilos de Owl Carousel
     wp_enqueue_style(

@@ -5,8 +5,8 @@
     </a>
   </div>
   <ul class="nav">
-    <li><a href="#inicio">INICIO</a></li>
-    <li><a href="#servicios">servicios</a></li>
+    <li><a href="#home">INICIO</a></li>
+    <li><a href="#servicios">SERVICIOS</a></li>
     <li><a href="#sectores">SECTORES</a></li>
     <li><a href="#nosotros">NOSOTROS</a></li>
     <li><a href="#historia">HISTORIA</a></li>
