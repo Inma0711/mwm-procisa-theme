@@ -10,6 +10,6 @@
     <li><a href="#sectores">SECTORES</a></li>
     <li><a href="#nosotros">NOSOTROS</a></li>
     <li><a href="#historia">HISTORIA</a></li>
-    <li><a href="#contactoo">contactoO</a></li>
+    <li><a href="#contacto">CONTACTO</a></li>
   </ul>
 </nav> 

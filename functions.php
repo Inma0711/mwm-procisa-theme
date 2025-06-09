@@ -69,7 +69,7 @@ function procisa_enqueue_assets() {
     );
     wp_enqueue_style(
         'procisa-carruselcertidicados',
-        get_template_directory_uri() . '/assets/css/carrusercertificados.css',
+        get_template_directory_uri() . '/assets/css/carruselcertificados.css',
         array('procisa-style'),
         filemtime(get_template_directory() . '/assets/css/carruselcertificados.css')
     );
@@ -136,6 +136,14 @@ function procisa_enqueue_assets() {
         wp_enqueue_script( 'procisa-nav-scroll', get_template_directory_uri() . '/assets/js/nav-scroll.js', array('jquery', 'owl-carousel-js'), '1.0', true );
     }
 
+    // Script personalizado para el carrusel
+    wp_enqueue_script(
+        'procisa-carrusel',
+        get_template_directory_uri() . '/assets/js/carrusel.js',
+        array('jquery', 'owl-carousel-js'),
+        filemtime(get_template_directory() . '/assets/js/carrusel.js'),
+        true // Carga el script en el footer
+    );
 }
 add_action( 'wp_enqueue_scripts', 'procisa_enqueue_assets' );
 
