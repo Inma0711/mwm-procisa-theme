@@ -68,10 +68,10 @@ function procisa_enqueue_assets() {
         filemtime(get_template_directory() . '/assets/css/contacto.css')
     );
     wp_enqueue_style(
-        'procisa-carruselcertidicados',
-        get_template_directory_uri() . '/assets/css/carruselcertificados.css',
+        'procisa-carrusel',
+        get_template_directory_uri() . '/assets/css/carrusel.css',
         array('procisa-style'),
-        filemtime(get_template_directory() . '/assets/css/carruselcertificados.css')
+        filemtime(get_template_directory() . '/assets/css/carrusel.css')
     );
     wp_enqueue_style(
         'procisa-sectores',

@@ -26,17 +26,17 @@
     <!-- Sección de servicios -->
     <?php get_template_part('template-parts/servicios'); ?>
     <?php get_template_part('template-parts/txtblock-servicios'); ?>
-    <?php get_template_part('template-parts/carruselcertificados'); ?>
+    <?php get_template_part('template-parts/carruselservicios'); ?>
 
     <!-- Sección de sectores -->
     <?php get_template_part('template-parts/sectores'); ?>
     <?php get_template_part('template-parts/txtblock-sectores'); ?>
-    <?php get_template_part('template-parts/carruselcertificados'); ?>
+    <?php get_template_part('template-parts/carruselsectores'); ?>
 
     <!-- Sección de nosotros -->
     <?php get_template_part('template-parts/nosotros'); ?>
     <?php get_template_part('template-parts/txtblock-nosotros'); ?>
-    <?php get_template_part('template-parts/carruselcertificados'); ?>
+    <?php get_template_part('template-parts/carruselservicios'); ?>
 
     <!-- Sección de historia -->
     <?php get_template_part('template-parts/historia'); ?>
