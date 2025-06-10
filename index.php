@@ -36,7 +36,7 @@
     <!-- Sección de nosotros -->
     <?php get_template_part('template-parts/nosotros'); ?>
     <?php get_template_part('template-parts/txtblock-nosotros'); ?>
-    <?php get_template_part('template-parts/carruselservicios'); ?>
+    <?php get_template_part('template-parts/carruselnosotros'); ?>
 
     <!-- Sección de historia -->
     <?php get_template_part('template-parts/historia'); ?>
