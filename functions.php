@@ -22,6 +22,22 @@ if (function_exists('acf_add_local_field_group')) {
         'title' => 'Sección de Servicios',
         'fields' => array(
             array(
+                'key' => 'field_servicios_titulo',
+                'label' => 'Título de Servicios',
+                'name' => 'servicios_titulo',
+                'type' => 'text',
+                'instructions' => 'Edita el título de la sección de servicios',
+                'default_value' => 'SERVICIOS',
+            ),
+            array(
+                'key' => 'field_servicios_icono',
+                'label' => 'Icono de Servicios',
+                'name' => 'servicios_icono',
+                'type' => 'image',
+                'instructions' => 'Sube el icono para la sección de servicios',
+                'return_format' => 'array',
+            ),
+            array(
                 'key' => 'field_servicios_texto',
                 'label' => 'Texto de Servicios',
                 'name' => 'servicios_texto',
@@ -33,9 +49,9 @@ if (function_exists('acf_add_local_field_group')) {
         'location' => array(
             array(
                 array(
-                    'param' => 'page_type',
+                    'param' => 'options_page',
                     'operator' => '==',
-                    'value' => 'front_page',
+                    'value' => 'theme-general-settings',
                 ),
             ),
         ),
@@ -46,6 +62,22 @@ if (function_exists('acf_add_local_field_group')) {
         'key' => 'group_sectores',
         'title' => 'Sección de Sectores',
         'fields' => array(
+            array(
+                'key' => 'field_sectores_titulo',
+                'label' => 'Título de Sectores',
+                'name' => 'sectores_titulo',
+                'type' => 'text',
+                'instructions' => 'Edita el título de la sección de sectores',
+                'default_value' => 'SECTORES',
+            ),
+            array(
+                'key' => 'field_sectores_icono',
+                'label' => 'Icono de Sectores',
+                'name' => 'sectores_icono',
+                'type' => 'image',
+                'instructions' => 'Sube el icono para la sección de sectores',
+                'return_format' => 'array',
+            ),
             array(
                 'key' => 'field_sectores_texto',
                 'label' => 'Texto de Sectores',
@@ -58,9 +90,9 @@ if (function_exists('acf_add_local_field_group')) {
         'location' => array(
             array(
                 array(
-                    'param' => 'page_type',
+                    'param' => 'options_page',
                     'operator' => '==',
-                    'value' => 'front_page',
+                    'value' => 'theme-general-settings',
                 ),
             ),
         ),
@@ -71,6 +103,22 @@ if (function_exists('acf_add_local_field_group')) {
         'key' => 'group_historia',
         'title' => 'Sección de Historia',
         'fields' => array(
+            array(
+                'key' => 'field_historia_titulo',
+                'label' => 'Título de Historia',
+                'name' => 'historia_titulo',
+                'type' => 'text',
+                'instructions' => 'Edita el título de la sección de historia',
+                'default_value' => 'HISTORIA',
+            ),
+            array(
+                'key' => 'field_historia_icono',
+                'label' => 'Icono de Historia',
+                'name' => 'historia_icono',
+                'type' => 'image',
+                'instructions' => 'Sube el icono para la sección de historia',
+                'return_format' => 'array',
+            ),
             array(
                 'key' => 'field_historia_texto',
                 'label' => 'Texto de Historia',
@@ -83,9 +131,9 @@ if (function_exists('acf_add_local_field_group')) {
         'location' => array(
             array(
                 array(
-                    'param' => 'page_type',
+                    'param' => 'options_page',
                     'operator' => '==',
-                    'value' => 'front_page',
+                    'value' => 'theme-general-settings',
                 ),
             ),
         ),
@@ -97,6 +145,22 @@ if (function_exists('acf_add_local_field_group')) {
         'title' => 'Sección de Nosotros',
         'fields' => array(
             array(
+                'key' => 'field_nosotros_titulo',
+                'label' => 'Título de Nosotros',
+                'name' => 'nosotros_titulo',
+                'type' => 'text',
+                'instructions' => 'Edita el título de la sección de nosotros',
+                'default_value' => 'NOSOTROS',
+            ),
+            array(
+                'key' => 'field_nosotros_icono',
+                'label' => 'Icono de Nosotros',
+                'name' => 'nosotros_icono',
+                'type' => 'image',
+                'instructions' => 'Sube el icono para la sección de nosotros',
+                'return_format' => 'array',
+            ),
+            array(
                 'key' => 'field_nosotros_texto',
                 'label' => 'Texto de Nosotros',
                 'name' => 'nosotros_texto',
@@ -104,34 +168,162 @@ if (function_exists('acf_add_local_field_group')) {
                 'instructions' => 'Edita el texto de la sección de nosotros',
                 'default_value' => 'Nuestro equipo humano integra e incorpora la experiencia y conocimiento adquiridos durante 44 años por la compañía con las últimas innovaciones. Este conjunto de habilidades nos permite generar soluciones especificas para cada sector.',
             ),
+        ),
+        'location' => array(
             array(
-                'key' => 'field_nosotros_equipo',
-                'label' => 'Equipo',
-                'name' => 'nosotros_equipo',
-                'type' => 'repeater',
-                'layout' => 'table',
-                'sub_fields' => array(
-                    array(
-                        'key' => 'field_nosotros_nombre',
-                        'label' => 'Nombre',
-                        'name' => 'nombre',
-                        'type' => 'text',
-                    ),
-                    array(
-                        'key' => 'field_nosotros_cargo',
-                        'label' => 'Cargo',
-                        'name' => 'cargo',
-                        'type' => 'text',
-                    ),
-                    array(
-                        'key' => 'field_nosotros_imagen',
-                        'label' => 'Imagen',
-                        'name' => 'imagen',
-                        'type' => 'image',
-                        'return_format' => 'array',
-                        'preview_size' => 'thumbnail',
-                    ),
+                array(
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'theme-general-settings',
                 ),
+            ),
+        ),
+    ));
+
+    // Configuración de ACF para la página principal
+    acf_add_local_field_group(array(
+        'key' => 'group_front_page',
+        'title' => 'Campos de la Página Principal',
+        'fields' => array(
+            // Campos para Servicios
+            array(
+                'key' => 'field_servicios_titulo',
+                'label' => 'Título de Servicios',
+                'name' => 'servicios_titulo',
+                'type' => 'text',
+                'instructions' => 'Ingrese el título de la sección de servicios',
+                'required' => 0,
+            ),
+            array(
+                'key' => 'field_servicios_icono',
+                'label' => 'Icono de Servicios',
+                'name' => 'servicios_icono',
+                'type' => 'image',
+                'instructions' => 'Seleccione el icono para la sección de servicios',
+                'required' => 0,
+                'return_format' => 'array',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_servicios_texto',
+                'label' => 'Texto de Servicios',
+                'name' => 'servicios_texto',
+                'type' => 'textarea',
+                'instructions' => 'Ingrese el texto descriptivo de servicios',
+                'required' => 0,
+            ),
+            // Campos para Sectores
+            array(
+                'key' => 'field_sectores_titulo',
+                'label' => 'Título de Sectores',
+                'name' => 'sectores_titulo',
+                'type' => 'text',
+                'instructions' => 'Ingrese el título de la sección de sectores',
+                'required' => 0,
+            ),
+            array(
+                'key' => 'field_sectores_icono',
+                'label' => 'Icono de Sectores',
+                'name' => 'sectores_icono',
+                'type' => 'image',
+                'instructions' => 'Seleccione el icono para la sección de sectores',
+                'required' => 0,
+                'return_format' => 'array',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_sectores_texto',
+                'label' => 'Texto de Sectores',
+                'name' => 'sectores_texto',
+                'type' => 'textarea',
+                'instructions' => 'Ingrese el texto descriptivo de sectores',
+                'required' => 0,
+            ),
+            // Campos para Historia
+            array(
+                'key' => 'field_historia_titulo',
+                'label' => 'Título de Historia',
+                'name' => 'historia_titulo',
+                'type' => 'text',
+                'instructions' => 'Ingrese el título de la sección de historia',
+                'required' => 0,
+            ),
+            array(
+                'key' => 'field_historia_icono',
+                'label' => 'Icono de Historia',
+                'name' => 'historia_icono',
+                'type' => 'image',
+                'instructions' => 'Seleccione el icono para la sección de historia',
+                'required' => 0,
+                'return_format' => 'array',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_historia_texto',
+                'label' => 'Texto de Historia',
+                'name' => 'historia_texto',
+                'type' => 'textarea',
+                'instructions' => 'Ingrese el texto descriptivo de historia',
+                'required' => 0,
+            ),
+            // Campos para Nosotros
+            array(
+                'key' => 'field_nosotros_titulo',
+                'label' => 'Título de Nosotros',
+                'name' => 'nosotros_titulo',
+                'type' => 'text',
+                'instructions' => 'Ingrese el título de la sección de nosotros',
+                'required' => 0,
+            ),
+            array(
+                'key' => 'field_nosotros_icono',
+                'label' => 'Icono de Nosotros',
+                'name' => 'nosotros_icono',
+                'type' => 'image',
+                'instructions' => 'Seleccione el icono para la sección de nosotros',
+                'required' => 0,
+                'return_format' => 'array',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_nosotros_texto',
+                'label' => 'Texto de Nosotros',
+                'name' => 'nosotros_texto',
+                'type' => 'textarea',
+                'instructions' => 'Ingrese el texto descriptivo de nosotros',
+                'required' => 0,
+            ),
+            // Campos para Contacto
+            array(
+                'key' => 'field_contacto_titulo',
+                'label' => 'Título de Contacto',
+                'name' => 'contacto_titulo',
+                'type' => 'text',
+                'instructions' => 'Ingrese el título de la sección de contacto',
+                'required' => 0,
+            ),
+            array(
+                'key' => 'field_contacto_icono',
+                'label' => 'Icono de Contacto',
+                'name' => 'contacto_icono',
+                'type' => 'image',
+                'instructions' => 'Seleccione el icono para la sección de contacto',
+                'required' => 0,
+                'return_format' => 'array',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_contacto_texto',
+                'label' => 'Texto de Contacto',
+                'name' => 'contacto_texto',
+                'type' => 'textarea',
+                'instructions' => 'Ingrese el texto descriptivo de contacto',
+                'required' => 0,
             ),
         ),
         'location' => array(
@@ -143,6 +335,14 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
         ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
     ));
 }
 
@@ -199,6 +399,24 @@ function procisa_enqueue_assets() {
         filemtime(get_template_directory() . '/assets/css/servicios.css')
     );
     wp_enqueue_style(
+        'procisa-sectores',
+        get_template_directory_uri() . '/assets/css/sectores.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/sectores.css')
+    );
+    wp_enqueue_style(
+        'procisa-historia',
+        get_template_directory_uri() . '/assets/css/historia.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/historia.css')
+    );
+    wp_enqueue_style(
+        'procisa-nosotros',
+        get_template_directory_uri() . '/assets/css/nosotros.css',
+        array('procisa-style'),
+        filemtime(get_template_directory() . '/assets/css/nosotros.css')
+    );
+    wp_enqueue_style(
         'procisa-txtblock-servicios',
         get_template_directory_uri() . '/assets/css/txtblock-servicios.css',
         array('procisa-style'),
@@ -215,18 +433,6 @@ function procisa_enqueue_assets() {
         get_template_directory_uri() . '/assets/css/carrusel.css',
         array('procisa-style'),
         filemtime(get_template_directory() . '/assets/css/carrusel.css')
-    );
-    wp_enqueue_style(
-        'procisa-sectores',
-        get_template_directory_uri() . '/assets/css/sectores.css',
-        array('procisa-style'),
-        filemtime(get_template_directory() . '/assets/css/sectores.css')
-    );
-    wp_enqueue_style(
-        'procisa-nosotros',
-        get_template_directory_uri() . '/assets/css/nosotros.css',
-        array('procisa-style'),
-        filemtime(get_template_directory() . '/assets/css/nosotros.css')
     );
     wp_enqueue_style(
         'procisa-historialogos',

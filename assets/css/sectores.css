@@ -1,3 +1,4 @@
+/* === Sección Sectores General === */
 #sectores_items {
     display: flex;
     flex-direction: column;
@@ -101,5 +102,71 @@
     }
     .sector-item p {
         font-size: 14px;
+    }
+}
+
+.sectores-section {
+    padding: 60px 0 100px 0;
+    background: #f3f3f3;
+    border-bottom: 1px solid #e3e3e3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.sectores-section .container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 940px;
+    max-width: 100%;
+}
+
+.sectores-section h2 {
+    text-align: center;
+    font-size: 31.5px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: -3px;
+}
+
+.sectores-section .icon-works {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.sectores-section .icon-works::before,
+.sectores-section .icon-works::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #d3d3d3;
+    margin: 0 20px;
+}
+
+.sectores-section .icon-works img {
+    width: 100px;
+    height: auto;
+}
+
+.sectores-section .lead {
+    text-align: center;
+    color: #999;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 auto;
+    letter-spacing: -1px;
+}
+
+.sectores-section .lead strong {
+    color: #999;
+    font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+    .sectores-section .container {
+        width: 1170px;
     }
 }

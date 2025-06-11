@@ -6,17 +6,32 @@
 ?>
 
 
-<section id="contacto">
-<span id="contacto" ></span>
-          <div class="container">
-            <h2 class="text-center">CONTACTO</h2>
-            <div class="icon-works-contacto">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-contact.png" alt="contacto">
-            </div>
-            <p class="text-center lead">
-            Concertemos una reunión y trabajemos en mejorar su producción y resultados. El momento es ahora. <strong>Realicémoslo juntos.</strong>
-            </p>
-          </div>
+<section id="contacto" class="contacto-section">
+    <span id="contacto"></span>
+    <div class="container">
+        <h2 class="text-center">
+            <?php 
+            $titulo = get_field('contacto_titulo');
+            echo $titulo ? esc_html($titulo) : 'CONTACTO';
+            ?>
+        </h2>
+        <div class="icon-works-contacto">
+            <?php 
+            $icono = get_field('contacto_icono');
+            if ($icono && is_array($icono)) {
+                echo '<img src="' . esc_url($icono['url']) . '" alt="' . esc_attr($icono['alt']) . '">';
+            } else {
+                echo '<img src="' . get_template_directory_uri() . '/assets/images/icon-contact.png" alt="contacto">';
+            }
+            ?>
+        </div>
+        <p class="text-center lead">
+            <?php 
+            $texto = get_field('contacto_texto');
+            echo $texto ? wp_kses_post($texto) : 'Concertemos una reunión y trabajemos en mejorar su producción y resultados. El momento es ahora. <strong>Realicémoslo juntos.</strong>';
+            ?>
+        </p>
+    </div>
 
           <div class="row">
             <div class="span5">

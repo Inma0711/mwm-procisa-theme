@@ -1,17 +1,26 @@
-<section id="servicios"> <!-- Ha la seccion sectores lleva los estilos de servicios para no repetir codigo -->
+<section id="sectores" class="sectores-section">
     <span id="sectores"></span>
     <div class="container">
-        <h2 class="text-center">SECTORES</h2>
+        <h2 class="text-center">
+            <?php 
+            $titulo = get_field('sectores_titulo');
+            echo $titulo ? esc_html($titulo) : 'SECTORES';
+            ?>
+        </h2>
         <div class="icon-works">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service_icon.png" alt="servicios">
+            <?php 
+            $icono = get_field('sectores_icono');
+            if ($icono) {
+                echo '<img src="' . esc_url($icono['url']) . '" alt="' . esc_attr($icono['alt']) . '">';
+            } else {
+                echo '<img src="' . get_template_directory_uri() . '/assets/images/service_icon.png" alt="sectores">';
+            }
+            ?>
         </div>
         <p class="text-center lead">
             <?php 
-            if (function_exists('get_field')) {
-                echo wp_kses_post(get_field('sectores_texto'));
-            } else {
-                echo 'Desde 1980, hemos sido capaces de diversificar nuestra labor, aplicando tecnologías verificadas y contrastadas en diferentes sectores industriales. Nos avalan entre otras certificaciones las específicas de líderes a nivel mundial en automatización como son <strong>SIEMENS y ROCKWELL AUTOMATION.</strong>';
-            }
+            $texto = get_field('sectores_texto');
+            echo $texto ? wp_kses_post($texto) : 'Desde 1980, hemos sido capaces de diversificar nuestra labor, aplicando tecnologías verificadas y contrastadas en diferentes sectores industriales. Nos avalan entre otras certificaciones las específicas de líderes a nivel mundial en automatización como son <strong>SIEMENS y ROCKWELL AUTOMATION.</strong>';
             ?>
         </p>
     </div>

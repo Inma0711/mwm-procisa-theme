@@ -37,8 +37,10 @@
     margin: 0 20px;
 }
 
-.icon-works img {
-    height: 100%;
+#contacto .icon-works-contacto img {
+    width: 100px;
+    height: auto;
+    max-height: 100px;
 }
 
 /* === Descripción principal === */
