@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php wp_title('|', true, 'right'); ?></title>
     <?php wp_head(); ?>
-
-     <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-
-<!-- Owl Carousel -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
- 
 </head>
 <body <?php body_class(); ?>>
 
@@ -49,6 +39,6 @@
     </main>
 
 <?php get_template_part('template-parts/footer'); ?>
-
+<?php wp_footer(); ?>
 </body>
 </html>

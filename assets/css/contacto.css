@@ -1,8 +1,8 @@
-/* Estilos para la sección de contactoo */
+/* === Sección Contacto General === */
 #contacto {
     padding: 60px 0;
-    background-color: #dcdcdc; /* Color de fondo de la sección */
-    text-align: center; /* Centrar el contenido general de la sección */
+    background-color: #dcdcdc;
+    text-align: center;
 }
 
 #contacto .container {
@@ -12,111 +12,110 @@
 }
 
 #contacto h2 {
-    font-size: 31.5px;
+    font-size: 32px;
     font-weight: 800;
     margin-bottom: 10px;
     text-transform: uppercase;
-    color: #222;
-    letter-spacing: -3px;
-}
-
-#contacto .icon-works::before,
-#contacto .icon-works::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: #d80000;
-  margin: 0 20px;
-}
-
-#contacto .icon-contacto {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 10px;
-}
-
-#contacto .icon-contacto img {
-    height: 30px;
-}
-
-#contacto .lead {
-    color: #999;
-    font-size: 21px;
-    font-weight: 300;
-    margin: 0 auto 50px auto;
-    line-height: 1.6;
+    color: #333;
     letter-spacing: -1px;
 }
 
-#contacto .lead strong {
-    color: #444;
-    font-weight: 700;
+/* === Icono centrado con líneas a los lados === */
+.icon-works-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
 }
 
+.icon-works-contacto::before,
+.icon-works-contacto::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #fff7f7;
+    margin: 0 20px;
+}
+
+.icon-works img {
+    height: 100%;
+}
+
+/* === Descripción principal === */
+#contacto .lead {
+    color: #666;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* === Layout del formulario e info === */
 #contacto .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centrar las columnas */
-    margin-left: -15px;
-    margin-right: -15px;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-#contacto .span5 {
-    flex: 0 0 41.66666667%; /* Bootstrap span5 */
-    max-width: 41.66666667%;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
+#contacto .span5,
 #contacto .span6 {
-    flex: 0 0 50%; /* Bootstrap span6 */
-    max-width: 50%;
+    flex: 1 1 45%;
     padding: 0 15px;
     box-sizing: border-box;
 }
 
 #contacto .offset1 {
-    margin-left: 8.33333333%; /* Bootstrap offset1 */
+    margin-left: 0;
 }
 
-#contacto form input[type="text"],
-#contacto form input[type="email"],
+/* === Formulario === */
+#contacto form input,
 #contacto form textarea {
-    width: 100%;
-    padding: 10px;
+    width: 80%;
+    padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    background-color: #ffffff;
     font-size: 16px;
-    box-sizing: border-box;
-    border-radius: 4px; /* Pequeño redondeado para los campos */
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #FFF;
+    height: 40px;
 }
 
 #contacto form textarea {
-    min-height: 150px;
+    min-height: 400px;
     resize: vertical;
 }
 
-#contacto form button[type="submit"] {
-    background-color: #555555; /* Color del botón Enviar */
+#contacto form button {
+    background-color: #555;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 4px;
     transition: background-color 0.3s ease;
-    border-radius: 4px; /* Redondeado para el botón */
+    width: 80%;
 }
 
-#contacto form button[type="submit"]:hover {
-    background-color: #444444;
+#contacto form button:hover {
+    background-color: #444;
 }
 
+/* === Información de contacto === */
 .contacto-info-block {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 1.6;
-    color: #555; /* Color del texto de la información de contactoo */
-    text-align: left; /* Alinear texto a la izquierda para los bloques de información */
+    color: #555;
+    text-align: left;
 }
 
 .contacto-info-block strong {
@@ -124,69 +123,54 @@
     font-weight: bold;
 }
 
+/* === Formulario de suscripción === */
 .subscribe-form {
     display: flex;
-    gap: 10px; /* Espacio entre el input y el botón */
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .subscribe-form input[type="email"] {
-    flex-grow: 1; /* Permite que el input ocupe el espacio disponible */
+    flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: #ffffff;
     font-size: 16px;
-    box-sizing: border-box;
     border-radius: 4px;
+    background-color: #fff;
 }
 
-.subscribe-form button[type="submit"] {
-    background-color: #555555; /* Color del botón Suscribirse */
+.subscribe-form button {
+    background-color: #555;
     color: #fff;
     padding: 10px 20px;
     border: none;
-    cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
     border-radius: 4px;
-    white-space: nowrap; /* Evita que el texto del botón se rompa */
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
 }
 
-.subscribe-form button[type="submit"]:hover {
-    background-color: #444444;
+.subscribe-form button:hover {
+    background-color: #444;
 }
 
-/* Media queries para responsividad */
+/* === Responsive === */
 @media (max-width: 992px) {
-    #contacto .span5,
-    #contacto .span6,
-    #contacto .offset1 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-left: 0;
+    #contacto .row {
+        flex-direction: column;
+        align-items: center;
     }
+
+    #contacto .span5,
+    #contacto .span6 {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
     .contacto-info-block,
     .subscribe-form {
-        text-align: center; /* Centrar en móviles */
-    }
-    .subscribe-form input[type="email"] {
-        width: auto; /* Dejar que el flex-grow controle el ancho */
+        text-align: center;
     }
 }
-
-@media (max-width: 768px) {
-    #contacto .lead {
-        font-size: 18px;
-    }
-    #contacto form input[type="text"],
-    #contacto form input[type="email"],
-    #contacto form textarea,
-    .subscribe-form input[type="email"] {
-        padding: 8px;
-        font-size: 14px;
-    }
-    #contacto form button[type="submit"],
-    .subscribe-form button[type="submit"] {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-} 
