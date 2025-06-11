@@ -3,6 +3,149 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Seguridad: evitar acceso directo
 }
 
+// Configuración de ACF
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title' => 'Configuración del Tema',
+        'menu_title' => 'Configuración del Tema',
+        'menu_slug'  => 'theme-general-settings',
+        'capability' => 'edit_posts',
+        'redirect'   => false
+    ));
+}
+
+// Registrar campos ACF para las secciones
+if (function_exists('acf_add_local_field_group')) {
+    // Grupo de campos para la sección de Servicios
+    acf_add_local_field_group(array(
+        'key' => 'group_servicios',
+        'title' => 'Sección de Servicios',
+        'fields' => array(
+            array(
+                'key' => 'field_servicios_texto',
+                'label' => 'Texto de Servicios',
+                'name' => 'servicios_texto',
+                'type' => 'wysiwyg',
+                'instructions' => 'Edita el texto de la sección de servicios',
+                'default_value' => 'Ofrecemos a nuestros Clientes una gran experiencia y Know-How, implementando soluciones singulares y avanzadas, tanto en proyectos de <strong>Automatización, Control y Seguimiento</strong> de la Producción, como en <strong>Gestión de Procesos</strong>, aplicando los más modernos métodos y tecnologías. Esto implica un serio compromiso al asumir los retos y desafíos que puedan presentarse para conseguir juntos los objetivos estratégicos de nuestros Clientes.',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page_type',
+                    'operator' => '==',
+                    'value' => 'front_page',
+                ),
+            ),
+        ),
+    ));
+
+    // Grupo de campos para la sección de Sectores
+    acf_add_local_field_group(array(
+        'key' => 'group_sectores',
+        'title' => 'Sección de Sectores',
+        'fields' => array(
+            array(
+                'key' => 'field_sectores_texto',
+                'label' => 'Texto de Sectores',
+                'name' => 'sectores_texto',
+                'type' => 'wysiwyg',
+                'instructions' => 'Edita el texto de la sección de sectores',
+                'default_value' => 'Desde 1980, hemos sido capaces de diversificar nuestra labor, aplicando tecnologías verificadas y contrastadas en diferentes sectores industriales. Nos avalan entre otras certificaciones las específicas de líderes a nivel mundial en automatización como son <strong>SIEMENS y ROCKWELL AUTOMATION.</strong>',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page_type',
+                    'operator' => '==',
+                    'value' => 'front_page',
+                ),
+            ),
+        ),
+    ));
+
+    // Grupo de campos para la sección de Historia
+    acf_add_local_field_group(array(
+        'key' => 'group_historia',
+        'title' => 'Sección de Historia',
+        'fields' => array(
+            array(
+                'key' => 'field_historia_texto',
+                'label' => 'Texto de Historia',
+                'name' => 'historia_texto',
+                'type' => 'wysiwyg',
+                'instructions' => 'Edita el texto de la sección de historia',
+                'default_value' => 'La constante evolución de los Sistemas de Control Industrial nos motiva para situarnos siempre en <strong>vanguardia</strong> y así afrontar nuevos retos con las mayores garantías de <strong>éxito</strong>. En sus 44 años de historia, <strong>PROCISA</strong> ha conseguido diversificar su participación en diferentes sectores industriales, siendo pieza clave para la consecución del éxito de numerosos proyectos. Estos son los principales <strong>Hitos en la Historia de la compañía.</strong>',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page_type',
+                    'operator' => '==',
+                    'value' => 'front_page',
+                ),
+            ),
+        ),
+    ));
+
+    // Grupo de campos para la sección de Nosotros
+    acf_add_local_field_group(array(
+        'key' => 'group_nosotros',
+        'title' => 'Sección de Nosotros',
+        'fields' => array(
+            array(
+                'key' => 'field_nosotros_texto',
+                'label' => 'Texto de Nosotros',
+                'name' => 'nosotros_texto',
+                'type' => 'wysiwyg',
+                'instructions' => 'Edita el texto de la sección de nosotros',
+                'default_value' => 'Nuestro equipo humano integra e incorpora la experiencia y conocimiento adquiridos durante 44 años por la compañía con las últimas innovaciones. Este conjunto de habilidades nos permite generar soluciones especificas para cada sector.',
+            ),
+            array(
+                'key' => 'field_nosotros_equipo',
+                'label' => 'Equipo',
+                'name' => 'nosotros_equipo',
+                'type' => 'repeater',
+                'layout' => 'table',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'field_nosotros_nombre',
+                        'label' => 'Nombre',
+                        'name' => 'nombre',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'key' => 'field_nosotros_cargo',
+                        'label' => 'Cargo',
+                        'name' => 'cargo',
+                        'type' => 'text',
+                    ),
+                    array(
+                        'key' => 'field_nosotros_imagen',
+                        'label' => 'Imagen',
+                        'name' => 'imagen',
+                        'type' => 'image',
+                        'return_format' => 'array',
+                        'preview_size' => 'thumbnail',
+                    ),
+                ),
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page_type',
+                    'operator' => '==',
+                    'value' => 'front_page',
+                ),
+            ),
+        ),
+    ));
+}
+
 // Cargar texto de traducciones (si usas idiomas)
 function procisa_theme_setup() {
     load_theme_textdomain( 'mwm-procisa-theme', get_template_directory() . '/languages' );
@@ -115,8 +258,16 @@ function procisa_enqueue_assets() {
     );
 
     // Scripts
-    // Asegúrate de que jQuery esté cargado. WordPress lo carga por defecto.
     wp_enqueue_script('jquery');
+
+    // Script para el nav
+    wp_enqueue_script(
+        'procisa-nav-scroll',
+        get_template_directory_uri() . '/assets/js/nav-scroll.js',
+        array('jquery'),
+        filemtime(get_template_directory() . '/assets/js/nav-scroll.js'),
+        true
+    );
 
     // Scripts de Owl Carousel
     wp_enqueue_script(
@@ -130,10 +281,6 @@ function procisa_enqueue_assets() {
     $nav_js = get_template_directory() . '/js/navigation.js';
     if ( file_exists( $nav_js ) ) {
         wp_enqueue_script( 'procisa-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
-    }
-    $nav_scroll_js = get_template_directory() . '/assets/js/nav-scroll.js';
-    if ( file_exists( $nav_scroll_js ) ) {
-        wp_enqueue_script( 'procisa-nav-scroll', get_template_directory_uri() . '/assets/js/nav-scroll.js', array('jquery', 'owl-carousel-js'), '1.0', true );
     }
 
     // Script personalizado para el carrusel

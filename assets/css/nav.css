@@ -10,6 +10,7 @@
   align-items: center;
   height: 70px;
   z-index: 100;
+  transition: all 0.3s ease-in-out;
 }
 .navbar .brand {
   display: flex;
@@ -39,12 +40,26 @@
   color: #FFD600;
 }
 
-.nav-sticky {
+/* Estilos para cuando el nav está fijo */
+.navbar.fixed {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 1000;
-  background: #fff; /* O el color de tu nav */
+  background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+  
+  .navbar .nav {
+    gap: 15px;
+  }
+  
+  .navbar .brand img {
+    width: 80%;
+  }
 }
