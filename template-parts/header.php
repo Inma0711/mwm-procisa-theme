@@ -8,14 +8,14 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_procisa.png" alt="Trabajador"/>
         </div>
         <div class="slider">
-            <span>Especialistas en</span>
-            <div class="slider-phrases">
-                <span class="active">automatización y control</span>
-                <span>proyectos industriales</span>
-                <span>soluciones innovadoras</span>
-            </div>
-            <span>industrial.</span>
-        </div>
+  <div class="slider-phrases">
+    <span class="active"><strong>44 años de experiencia</strong> internacional.</span>
+    <span>Soluciones de <strong>virtualización</strong> para sistemas de control.</span>
+    <span>Mantenimiento y <strong>tele-asistencia</strong> de instalaciones.</span>
+    <span>Especialistas en <strong>automatización y control</strong> industrial.</span>
+  </div>
+</div>
+
         <!-- Logos y mapa dentro del header -->
         <section class="home-logos" style="position: relative;">
           <div class="row-fluid">

@@ -29,7 +29,7 @@
             </div>
             <div class="span6 offset1">
                 <div class="contacto-info-block">
-                    <strong>Sede en Europa</strong><br>
+                    <h3 class="contacto-titulo">Sede en Europa</h3>
                     Parque Industrial y de Servicios del Aljarafe.<br>
                     Calle Brújula 62.<br>
                     41927 - Mairena del Aljarafe (Sevilla).<br>
@@ -37,18 +37,18 @@
                     <strong>Tlf.: +34 954 18 66 80</strong>
                 </div>
                 <div class="contacto-info-block">
-                    <strong>Sede en América</strong><br>
+                    <h3 class="contacto-titulo">Sede en América</h3>
                     6ª Avd. 0-60 Gran Centro Comercial Zona 4 / Torre II.<br>
                     8º Nivel. Oficina 801.<br>
                     01004 Guatemala C.A. (Guatemala).<br>
                     <strong>Tlf.: +502 2335-2320 / Tlf.: +502 2335-2198</strong>
                 </div>
                 <div class="contacto-info-block">
-                    <strong>¿Busca trabajo?</strong><br>
+                    <h3 class="contacto-titulo">¿Busca trabajo?</h3>
                     trabajengrupoprocisa@procisa.es
                 </div>
                 <div class="contacto-info-block">
-                    <strong>Suscríbete a nuestra lista de correo</strong><br>
+                    <h3 class="contacto-titulo">Suscríbete a nuestra lista de correo</h3>
                     <form class="subscribe-form">
                         <input type="email" placeholder="E-mail">
                         <button type="submit">Subscribirse</button>

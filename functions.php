@@ -144,6 +144,15 @@ function procisa_enqueue_assets() {
         filemtime(get_template_directory() . '/assets/js/carrusel.js'),
         true // Carga el script en el footer
     );
+
+    // Script para el slider del header
+    wp_enqueue_script(
+        'procisa-header-slider',
+        get_template_directory_uri() . '/assets/js/header-slider.js',
+        array('jquery'),
+        filemtime(get_template_directory() . '/assets/js/header-slider.js'),
+        true // Carga el script en el footer
+    );
 }
 add_action( 'wp_enqueue_scripts', 'procisa_enqueue_assets' );
 

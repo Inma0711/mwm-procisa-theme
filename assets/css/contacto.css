@@ -62,14 +62,14 @@
 #contacto .span5,
 #contacto .span6 {
     flex: 1 1 45%;
+    flex-direction: column;
     padding: 0 15px;
     box-sizing: border-box;
 }
 
-#contacto .offset1 {
-    margin-left: 0;
+#contacto .span6 {
+    align-items: flex-start;
 }
-
 /* === Formulario === */
 #contacto form input,
 #contacto form textarea {
@@ -123,9 +123,19 @@
     font-weight: bold;
 }
 
+.contacto-titulo {
+    font-size: 21px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.1;
+    margin: 3px;
+}
+
 /* === Formulario de suscripción === */
 .subscribe-form {
     display: flex;
+    flex-direction: column;
+    width: 600px;
     gap: 10px;
     flex-wrap: wrap;
 }
